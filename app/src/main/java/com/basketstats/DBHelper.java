@@ -19,6 +19,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String Stats_Column_ID = "id";
     public static final String Stats_Column_GAME_NAME = "Game_Name";
     public static final String Stats_Column_CITY_NAME = "City_Name";
+    jb
 
 
     public DBHelper(Context context){
