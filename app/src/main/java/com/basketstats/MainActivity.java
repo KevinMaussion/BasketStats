@@ -40,14 +40,14 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.new_language:
+                //switch (menuItem.getItemId()) {
+                    //case R.id.new_language:
                         // Do something with this item.
-                        break;
-                    case R.id.license:
+                      //  break;
+                    //case R.id.license:
                         // Do something with this item.
-                        break;
-                }
+                      //  break;
+                //}
                 // We want always close drawer.
                 drawerLayout.closeDrawers();
                 return true;

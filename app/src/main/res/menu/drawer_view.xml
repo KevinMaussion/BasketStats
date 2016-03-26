@@ -3,14 +3,16 @@
     <item android:title="@string/title_actions">
         <menu>
             <item
-                android:id="@+id/new_language"
-                android:title="@string/new_language"/>
+                android:id="@+id/ew_Stats"
+                android:title="@string/new_stats"/>
+            <item
+                android:id="@+id/rencontre"
+                android:title="@string/rencontre"/>
+            <item
+                android:id="@+id/equipe"
+                android:title="@string/equipe"/>
         </menu>
     </item>
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/license"
-            android:title="@string/action_license"/>
-    </group>
+
 </menu>
