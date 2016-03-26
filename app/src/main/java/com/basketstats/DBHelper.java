@@ -1,6 +1,6 @@
 package com.basketstats;
 
-/**
+/*
  * Created by kevin_maussion on 23/03/2016.
  */
 import android.content.ContentValues;
@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String Stats_Column_ID = "id";
     public static final String Stats_Column_GAME_NAME = "Game_Name";
     public static final String Stats_Column_CITY_NAME = "City_Name";
-    jb
+
 
 
     public DBHelper(Context context){
@@ -48,14 +48,13 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public Cursor getData(int id){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from Statistiques where id=" + id + "", null);
-        return  res;
+         return db.rawQuery("select * from Statistiques where id=" + id + "", null);
     }
 
     public int numberOfRows(){
         SQLiteDatabase db = this.getReadableDatabase();
-        int numRows = (int) DatabaseUtils.queryNumEntries(db, Stats_TABLE);
-        return numRows;
+        return (int) DatabaseUtils.queryNumEntries(db, Stats_TABLE);
+
     }
 
     public boolean updateStats(Integer id, String game_name, String game_city){
@@ -76,13 +75,13 @@ public class DBHelper extends SQLiteOpenHelper{
 
     public ArrayList<String> getAllStats() {
 
-        ArrayList<String> array_list = new ArrayList<String>();
+        ArrayList<String> array_list = new ArrayList<>();
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery("select * from Statistiques", null);
         res.moveToFirst();
 
-        while(res.isAfterLast() == false){
+        while(!res.isAfterLast()){
             array_list.add(res.getString(res.getColumnIndex(Stats_Column_GAME_NAME)));
             res.moveToNext();
         }
