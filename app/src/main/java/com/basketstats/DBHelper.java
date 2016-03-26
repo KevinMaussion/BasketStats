@@ -76,7 +76,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public ArrayList<String> getAllStats() {
 
         ArrayList<String> array_list = new ArrayList<>();
-        int i;
+
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery("select * from Statistiques", null);
